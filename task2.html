@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkerboard</title>
+  <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+  <div class="board">
+    <!-- 64 squares: 8 rows × 8 columns -->
+    <!-- Generated via loop or manually repeated -->
+    <!-- You can copy-paste the below block 64 times -->
+    <!-- We'll add classes dynamically for color -->
+    <script>
+      for (let i = 0; i < 64; i++) {
+        const div = document.createElement('div');
+        div.className = (Math.floor(i / 8) + i) % 2 === 0 ? 'pink' : 'black';
+        document.querySelector('.board').appendChild(div);
+      }
+    </script>
+  </div>
+</body>
+</html>
